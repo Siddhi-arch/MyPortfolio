@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HOME / HERO SECTION -->
+  <section id="home" class="hero">
+    <h1>Hello, I’m <span class="name">Siddhi Dubey</span></h1>
+    <p>Web Developer | Software Developer</p>
+    <button class="hero-btn" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">View Projects</button>
+  </section>
+
+  <!-- ABOUT YOU -->
+  <section id="about" class="about fade-in">
+    <h2>About Me</h2>
+    <p>I am a passionate web & software developer. I build interactive websites and clean, simple applications. I love learning new technologies and solving problems.</p>
+    <div class="skills">
+  <i class="fa-brands fa-html5"></i>
+  <i class="fa-brands fa-css3-alt"></i>
+  <i class="fa-brands fa-js"></i>
+  <i class="fa-brands fa-github"></i>
+    </div>
+   </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="projects fade-in">
+    <h2>My Projects</h2>
+    <div class="project">
+  <h3>To-Do App</h3>
+  <p>Built with HTML, CSS & JavaScript — add/delete/mark tasks!</p>
+  <p>
+    <a href="todo-app/index.html" target="_blank">Live Demo</a> |
+    <a href="todo-app/index.html" target="_blank">Code</a>
+  </p>
+  </div>
+      <div class="project">
+        <h3>Weather Dashboard</h3>
+        <p>Shows weather using OpenWeatherMap API.</p>
+        <a href="https://siddhi-arch.github.io/Weather-dashboard/">Live Demo</a>
+      </div>
+      <!-- Add more projects here -->
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact fade-in">
+    <h2>Contact Me</h2>
+    <p><a href="mailto:youremail@example.com"><i class="fa-solid fa-envelope"></i> Email</a></p>
+    <p><a href="https://linkedin.com/in/yourprofile"><i class="fa-brands fa-linkedin"></i> LinkedIn</a></p>
+    <p><a href="https://github.com/yourusername"><i class="fa-brands fa-github"></i> GitHub</a></p>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

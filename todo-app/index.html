@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Enhanced To-Do App</title>
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="todo-container">
+    <h1>To-Do List</h1>
+    <p id="taskCount" class="task-count">0 tasks left</p>
+
+    
+
+    <div class="input-wrap">
+      <input id="taskInput" type="text" placeholder="Add a task...">
+      <button id="addBtn">Add</button>
+      
+    </div>
+
+    <ul id="taskList"></ul>
+    <p id="emptyMsg" class="empty-msg">No tasks yet. Add one!</p>
+
+    <button id="clearBtn">Clear All Tasks</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

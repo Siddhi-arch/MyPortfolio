@@ -1,0 +1,156 @@
+body {
+  background: #eef2f3;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.todo-container {
+  background: #fff;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 450px;
+  text-align: center;
+}
+
+h1 {
+  color: #005f9e;
+  margin-bottom: 18px;
+}
+
+.input-wrap {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+input {
+  flex: 1;
+  padding: 12px;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+input:focus {
+  border-color: #00adee;
+}
+
+button {
+  padding: 12px 16px;
+  border: none;
+  background: #00adee;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 15px;
+}
+
+button:hover {
+  background: #007bb5;
+}
+
+#clearBtn {
+  margin-top: 14px;
+  background: #ff4757;
+}
+#clearBtn:hover {
+  background: #e63946;
+  color: white;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  background: #f7f7f7;
+  padding: 12px;
+  border-radius: 6px;
+  margin: 8px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.3s ease;
+}
+
+li:hover {
+  background: #e8e8e8;
+}
+
+li span {
+  flex: 1;
+}
+
+/* Completed text style */
+li.completed span {
+  text-decoration: line-through;
+  color: #888;
+  background: #dfffe0; /* light green */
+  transform: translateX(4px);
+  transition: 0.2s ease;
+}
+
+/* Check icon */
+.check-icon {
+  color: #007bb5;
+  margin-left: 12px;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+.check-icon.completed {
+  color: #28a745; /* green when completed */
+}
+.check-icon:hover {
+  color: #219653; /* darker green on hover */
+  transform: scale(1.2);
+}
+.task-count {
+  color: #333;
+  font-size: 16px;
+  margin: 8px 0 18px 0;
+}
+/* Delete icon */
+.delete-icon {
+  color: #ff4757;
+  margin-left: 10px;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+.delete-icon:hover {
+  color: #c0392b; /* darker red on hover */
+  transform: scale(1.2);
+}
+@keyframes pop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+
+li.completed .check-icon {
+  animation: pop 0.3s ease;
+}
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+li {
+  animation: fadeIn 0.3s ease;
+}
+.empty-msg {
+  text-align: center;
+  color: #555;
+  font-size: 16px;
+  margin: 12px 0;
+  display: none; /* start hidden */
+}
